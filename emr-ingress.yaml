@@ -2,8 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: emr-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   ingressClassName: emr
   rules:
@@ -24,7 +22,14 @@ spec:
                 port:
                   number: 8081
           - pathType: Prefix
-            path: /api/v1/resource/(outpatient|identity)
+            path: /api/v1/resource/outpatient
+            backend:
+              service:
+                name: emr-outpatient
+                port:
+                  number: 8082
+          - pathType: Prefix
+            path: /api/v1/resource/identity
             backend:
               service:
                 name: emr-outpatient
