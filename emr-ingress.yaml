@@ -2,40 +2,42 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: emr-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   rules:
     - http:
         paths:
           - pathType: Prefix
-            path: /auth
+            path: /api/v1/users
             backend:
               service:
                 name: emr-auth
                 port:
                   number: 8080
           - pathType: Prefix
-            path: /lab
+            path: /api/v1/resource/laboratory
             backend:
               service:
                 name: emr-lab
                 port:
                   number: 8081
           - pathType: Prefix
-            path: /outpatient
+            path: /api/v1/resource/(outpatient|identity)
             backend:
               service:
                 name: emr-outpatient
                 port:
                   number: 8082
           - pathType: Prefix
-            path: /pharmacy
+            path: /api/v1/resource/pharmacy
             backend:
               service:
                 name: emr-pharmacy
                 port:
                   number: 8083
           - pathType: Prefix
-            path: /radiology
+            path: /api/v1/resource/radiology
             backend:
               service:
                 name: emr-radiology
