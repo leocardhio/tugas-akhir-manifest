@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - image: leocardhio21/emr-auth:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           name: emr-auth
           livenessProbe:
             httpGet:
@@ -58,7 +58,7 @@ spec:
     spec:
       containers:
         - image: leocardhio21/emr-lab:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           name: emr-lab
           livenessProbe:
             httpGet:
@@ -102,7 +102,7 @@ spec:
     spec:
       containers:
         - image: leocardhio21/emr-outpatient:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           name: emr-outpatient
           livenessProbe:
             httpGet:
@@ -146,7 +146,7 @@ spec:
     spec:
       containers:
         - image: leocardhio21/emr-pharmacy:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           name: emr-pharmacy
           livenessProbe:
             httpGet:
@@ -190,7 +190,7 @@ spec:
     spec:
       containers:
         - image: leocardhio21/emr-radiology:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           name: emr-radiology
           livenessProbe:
             httpGet:
