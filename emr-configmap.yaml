@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: emr-config
+  namespace: default
+data:
+  REST_HOST: 0.0.0.0
+  DB_USER: leocardhio
+  DB_CLUSTER_URL: ta-emr.xywub6h.mongodb.net
+  SA_EMAIL: mongodb-atlas-service-account@digital-maker-392814.iam.gserviceaccount.com
+  SM_PROJECT_ID: digital-maker-392814
+  KMS_PROJECT_ID: kms-resource-393315
+  KMS_LOCATION: asia-southeast2
+  KMS_KEY_RING: KMS-Mongo-Asymmetric
+  KMS_KEY_VERSION: 1

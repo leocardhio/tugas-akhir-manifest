@@ -19,6 +19,19 @@ spec:
           ports:
             - containerPort: 8080
               protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: emr-config
+          env:
+            - name: KMS_KEY_NAME
+              value: "mongo-auth-symmetric-key"
+            - name: SA_PRIVATE_KEY
+              value: "SA_PRIVATE_KEY_AUTH"
+            - name: JWT_PRIVATE_KEY
+              value: "JWT_PRIVATE_KEY"
+            - name: DB_PASSWORD
+              value: "DB_PASSWORD"
+      serviceAccountName: default
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -41,6 +54,19 @@ spec:
           ports:
             - containerPort: 8081
               protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: emr-config
+          env:
+            - name: KMS_KEY_NAME
+              value: "mongo-symmetric-key"
+            - name: JWT_PUBLIC_KEY
+              value: "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAy5+9OXdqIWMjMPnlnB3oKn6cZuqOrtXh/8/TrFy6LNM=\n-----END PUBLIC KEY-----"
+            - name: SA_PRIVATE_KEY
+              value: "SA_PRIVATE_KEY_LAB"
+            - name: DB_PASSWORD
+              value: "DB_PASSWORD"
+      serviceAccountName: default
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -63,6 +89,19 @@ spec:
           ports:
             - containerPort: 8082
               protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: emr-config
+          env:
+            - name: KMS_KEY_NAME
+              value: "mongo-symmetric-key"
+            - name: JWT_PUBLIC_KEY
+              value: "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAy5+9OXdqIWMjMPnlnB3oKn6cZuqOrtXh/8/TrFy6LNM=\n-----END PUBLIC KEY-----"
+            - name: SA_PRIVATE_KEY
+              value: "SA_PRIVATE_KEY_LAB"
+            - name: DB_PASSWORD
+              value: "DB_PASSWORD"
+      serviceAccountName: default
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -85,6 +124,19 @@ spec:
           ports:
             - containerPort: 8083
               protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: emr-config
+          env:
+            - name: KMS_KEY_NAME
+              value: "mongo-symmetric-key"
+            - name: JWT_PUBLIC_KEY
+              value: "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAy5+9OXdqIWMjMPnlnB3oKn6cZuqOrtXh/8/TrFy6LNM=\n-----END PUBLIC KEY-----"
+            - name: SA_PRIVATE_KEY
+              value: "SA_PRIVATE_KEY_LAB"
+            - name: DB_PASSWORD
+              value: "DB_PASSWORD"
+      serviceAccountName: default
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -107,4 +159,17 @@ spec:
           ports:
             - containerPort: 8084
               protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: emr-config
+          env:
+            - name: KMS_KEY_NAME
+              value: "mongo-symmetric-key"
+            - name: JWT_PUBLIC_KEY
+              value: "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAy5+9OXdqIWMjMPnlnB3oKn6cZuqOrtXh/8/TrFy6LNM=\n-----END PUBLIC KEY-----"
+            - name: SA_PRIVATE_KEY
+              value: "SA_PRIVATE_KEY_LAB"
+            - name: DB_PASSWORD
+              value: "DB_PASSWORD"
+      serviceAccountName: default
 ---
