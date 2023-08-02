@@ -16,6 +16,13 @@ spec:
         - image: leocardhio21/emr-auth:latest
           imagePullPolicy: Always
           name: emr-auth
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "600m"
           livenessProbe:
             httpGet:
               path: /
@@ -60,6 +67,13 @@ spec:
         - image: leocardhio21/emr-lab:latest
           imagePullPolicy: Always
           name: emr-lab
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "600m"
           livenessProbe:
             httpGet:
               path: /
@@ -104,6 +118,13 @@ spec:
         - image: leocardhio21/emr-outpatient:latest
           imagePullPolicy: Always
           name: emr-outpatient
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "600m"
           livenessProbe:
             httpGet:
               path: /
@@ -155,6 +176,13 @@ spec:
         - image: leocardhio21/emr-pharmacy:latest
           imagePullPolicy: Always
           name: emr-pharmacy
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "600m"
           livenessProbe:
             httpGet:
               path: /
@@ -199,6 +227,13 @@ spec:
         - image: leocardhio21/emr-radiology:latest
           imagePullPolicy: Always
           name: emr-radiology
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "600m"
           livenessProbe:
             httpGet:
               path: /
