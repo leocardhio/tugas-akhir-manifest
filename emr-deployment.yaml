@@ -16,6 +16,15 @@ spec:
         - image: leocardhio21/emr-auth
           imagePullPolicy: IfNotPresent
           name: emr-auth
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 50
+            periodSeconds: 5
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
           ports:
             - containerPort: 8080
               protocol: TCP
@@ -51,6 +60,15 @@ spec:
         - image: leocardhio21/emr-lab
           imagePullPolicy: IfNotPresent
           name: emr-lab
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8081
+            initialDelaySeconds: 50
+            periodSeconds: 5
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
           ports:
             - containerPort: 8081
               protocol: TCP
@@ -86,6 +104,15 @@ spec:
         - image: leocardhio21/emr-outpatient
           imagePullPolicy: IfNotPresent
           name: emr-outpatient
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8082
+            initialDelaySeconds: 50
+            periodSeconds: 5
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
           ports:
             - containerPort: 8082
               protocol: TCP
@@ -121,6 +148,15 @@ spec:
         - image: leocardhio21/emr-pharmacy
           imagePullPolicy: IfNotPresent
           name: emr-pharmacy
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8083
+            initialDelaySeconds: 50
+            periodSeconds: 5
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
           ports:
             - containerPort: 8083
               protocol: TCP
@@ -156,6 +192,15 @@ spec:
         - image: leocardhio21/emr-radiology
           imagePullPolicy: IfNotPresent
           name: emr-radiology
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8084
+            initialDelaySeconds: 50
+            periodSeconds: 5
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
           ports:
             - containerPort: 8084
               protocol: TCP
