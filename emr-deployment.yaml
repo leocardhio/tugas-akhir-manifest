@@ -13,7 +13,7 @@ spec:
         app: emr-auth
     spec:
       containers:
-        - image: leocardhio21/emr-auth:latest
+        - image: leocardhio21/emr-auth:1.0
           imagePullPolicy: Always
           name: emr-auth
           livenessProbe:
