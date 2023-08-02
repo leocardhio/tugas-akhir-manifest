@@ -20,7 +20,7 @@ spec:
             httpGet:
               path: /
               port: 8080
-            initialDelaySeconds: 50
+            initialDelaySeconds: 360
             periodSeconds: 5
             timeoutSeconds: 5
             successThreshold: 1
@@ -64,7 +64,7 @@ spec:
             httpGet:
               path: /
               port: 8081
-            initialDelaySeconds: 50
+            initialDelaySeconds: 360
             periodSeconds: 5
             timeoutSeconds: 5
             successThreshold: 1
@@ -108,7 +108,7 @@ spec:
             httpGet:
               path: /
               port: 8082
-            initialDelaySeconds: 50
+            initialDelaySeconds: 360
             periodSeconds: 5
             timeoutSeconds: 5
             successThreshold: 1
@@ -152,7 +152,7 @@ spec:
             httpGet:
               path: /
               port: 8083
-            initialDelaySeconds: 50
+            initialDelaySeconds: 360
             periodSeconds: 5
             timeoutSeconds: 5
             successThreshold: 1
@@ -196,7 +196,7 @@ spec:
             httpGet:
               path: /
               port: 8084
-            initialDelaySeconds: 50
+            initialDelaySeconds: 360
             periodSeconds: 5
             timeoutSeconds: 5
             successThreshold: 1
