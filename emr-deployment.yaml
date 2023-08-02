@@ -128,6 +128,13 @@ spec:
               value: "SA_PRIVATE_KEY_LAB"
             - name: DB_PASSWORD
               value: "DB_PASSWORD"
+            - name: LAB_SERVICE_URL
+              value: "http://emr-lab.default.svc.cluster.local"
+            - name: PHARMACY_SERVICE_URL
+              value: "http://emr-pharmacy.default.svc.cluster.local"
+            - name: RADIOLOGY_SERVICE_URL
+              value: "http://emr-radiology.default.svc.cluster.local"
+              
       serviceAccountName: default
 ---
 apiVersion: apps/v1
