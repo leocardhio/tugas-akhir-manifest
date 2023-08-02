@@ -4,7 +4,7 @@ metadata:
   name: emr-config
   namespace: default
 data:
-  REST_HOST: 0.0.0.0
+  REST_HOST: "0.0.0.0"
   DB_USER: leocardhio
   DB_CLUSTER_URL: ta-emr.xywub6h.mongodb.net
   SA_EMAIL: mongodb-atlas-service-account@digital-maker-392814.iam.gserviceaccount.com
@@ -12,4 +12,4 @@ data:
   KMS_PROJECT_ID: kms-resource-393315
   KMS_LOCATION: asia-southeast2
   KMS_KEY_RING: KMS-Mongo-Asymmetric
-  KMS_KEY_VERSION: 1
+  KMS_KEY_VERSION: "1"
