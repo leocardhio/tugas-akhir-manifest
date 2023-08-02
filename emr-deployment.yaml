@@ -129,11 +129,11 @@ spec:
             - name: DB_PASSWORD
               value: "DB_PASSWORD"
             - name: LAB_SERVICE_URL
-              value: "http://emr-lab.default.c.k3a175a5f60fae8ea-tp.internal:8081"
+              value: "http://emr-lab.default.svc.cluster.local:8081"
             - name: PHARMACY_SERVICE_URL
-              value: "http://emr-pharmacy.default.c.k3a175a5f60fae8ea-tp.internal:8083"
+              value: "http://emr-pharmacy.default.svc.cluster.local:8083"
             - name: RADIOLOGY_SERVICE_URL
-              value: "http://emr-radiology.default.c.k3a175a5f60fae8ea-tp.internal:8084"
+              value: "http://emr-radiology.default.svc.cluster.local:8084"
               
       serviceAccountName: default
 ---
