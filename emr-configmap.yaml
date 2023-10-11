@@ -7,9 +7,9 @@ data:
   REST_HOST: "0.0.0.0"
   DB_USER: leocardhio
   DB_CLUSTER_URL: ta-emr.xywub6h.mongodb.net
-  SA_EMAIL: mongodb-atlas-service-account@digital-maker-392814.iam.gserviceaccount.com
-  SM_PROJECT_ID: digital-maker-392814
-  KMS_PROJECT_ID: kms-resource-393315
+  SA_EMAIL: mongodb-atlas-service-account@ta-emr-401712.iam.gserviceaccount.com
+  SM_PROJECT_ID: ta-emr-401712
+  KMS_PROJECT_ID: kms-resource-401712
   KMS_LOCATION: asia-southeast2
-  KMS_KEY_RING: KMS-Mongo-Asymmetric
+  KMS_KEY_RING: MongoDB-Encryption-Key
   KMS_KEY_VERSION: "1"

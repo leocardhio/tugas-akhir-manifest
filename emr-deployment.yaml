@@ -1,6 +1,57 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: emr-client-auth
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: emr-client-auth
+  template:
+    metadata:
+      labels:
+        app: emr-client-auth
+    spec:
+      containers:
+        - image: leocardhio21/emr-client-auth:latest
+          imagePullPolicy: Always
+          name: emr-client-auth
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "600m"
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 20
+            periodSeconds: 5
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: emr-config
+          env:
+            - name: KMS_KEY_NAME
+              value: "auth-symmetric-key"
+            - name: SA_PRIVATE_KEY
+              value: "SA_PRIVATE_KEY_AUTH"
+            - name: JWT_PRIVATE_KEY
+              value: "JWT_ADMIN_PRIVATE_KEY"
+            - name: DB_PASSWORD
+              value: "DB_PASSWORD"
+      serviceAccountName: default
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
   name: emr-auth
   namespace: default
 spec:
@@ -40,11 +91,11 @@ spec:
                 name: emr-config
           env:
             - name: KMS_KEY_NAME
-              value: "mongo-auth-symmetric-key"
+              value: "auth-symmetric-key"
             - name: SA_PRIVATE_KEY
               value: "SA_PRIVATE_KEY_AUTH"
             - name: JWT_PRIVATE_KEY
-              value: "JWT_PRIVATE_KEY"
+              value: "JWT_USER_PRIVATE_KEY"
             - name: DB_PASSWORD
               value: "DB_PASSWORD"
       serviceAccountName: default
@@ -91,13 +142,13 @@ spec:
                 name: emr-config
           env:
             - name: KMS_KEY_NAME
-              value: "mongo-symmetric-key"
-            - name: JWT_PUBLIC_KEY
-              value: "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAy5+9OXdqIWMjMPnlnB3oKn6cZuqOrtXh/8/TrFy6LNM=\n-----END PUBLIC KEY-----"
+              value: "service-symmetric-key"
             - name: SA_PRIVATE_KEY
-              value: "SA_PRIVATE_KEY_LAB"
+              value: "SA_PRIVATE_KEY_FASKES"
             - name: DB_PASSWORD
               value: "DB_PASSWORD"
+            - name: RSA_PRIVATE_KEY
+              value: "RSA_SIGNATURE_PRIVATE"
       serviceAccountName: default
 ---
 apiVersion: apps/v1
@@ -142,13 +193,13 @@ spec:
                 name: emr-config
           env:
             - name: KMS_KEY_NAME
-              value: "mongo-symmetric-key"
-            - name: JWT_PUBLIC_KEY
-              value: "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAy5+9OXdqIWMjMPnlnB3oKn6cZuqOrtXh/8/TrFy6LNM=\n-----END PUBLIC KEY-----"
+              value: "service-symmetric-key"
             - name: SA_PRIVATE_KEY
-              value: "SA_PRIVATE_KEY_LAB"
+              value: "SA_PRIVATE_KEY_FASKES"
             - name: DB_PASSWORD
               value: "DB_PASSWORD"
+            - name: RSA_PRIVATE_KEY
+              value: "RSA_SIGNATURE_PRIVATE"
             - name: LAB_SERVICE_URL
               value: "http://emr-lab.default.svc.cluster.local:8081"
             - name: PHARMACY_SERVICE_URL
@@ -200,13 +251,13 @@ spec:
                 name: emr-config
           env:
             - name: KMS_KEY_NAME
-              value: "mongo-symmetric-key"
-            - name: JWT_PUBLIC_KEY
-              value: "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAy5+9OXdqIWMjMPnlnB3oKn6cZuqOrtXh/8/TrFy6LNM=\n-----END PUBLIC KEY-----"
+              value: "service-symmetric-key"
             - name: SA_PRIVATE_KEY
-              value: "SA_PRIVATE_KEY_LAB"
+              value: "SA_PRIVATE_KEY_FASKES"
             - name: DB_PASSWORD
               value: "DB_PASSWORD"
+            - name: RSA_PRIVATE_KEY
+              value: "RSA_SIGNATURE_PRIVATE"
       serviceAccountName: default
 ---
 apiVersion: apps/v1
@@ -251,12 +302,12 @@ spec:
                 name: emr-config
           env:
             - name: KMS_KEY_NAME
-              value: "mongo-symmetric-key"
-            - name: JWT_PUBLIC_KEY
-              value: "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAy5+9OXdqIWMjMPnlnB3oKn6cZuqOrtXh/8/TrFy6LNM=\n-----END PUBLIC KEY-----"
+              value: "service-symmetric-key"
             - name: SA_PRIVATE_KEY
-              value: "SA_PRIVATE_KEY_LAB"
+              value: "SA_PRIVATE_KEY_FASKES"
             - name: DB_PASSWORD
               value: "DB_PASSWORD"
+            - name: RSA_PRIVATE_KEY
+              value: "RSA_SIGNATURE_PRIVATE"
       serviceAccountName: default
 ---

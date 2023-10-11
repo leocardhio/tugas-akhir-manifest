@@ -7,6 +7,13 @@ spec:
   rules:
     - http:
         paths:
+        - pathType: Prefix
+            path: /api/v1/client
+            backend:
+              service:
+                name: emr-client-auth
+                port:
+                  number: 8079
           - pathType: Prefix
             path: /api/v1/users
             backend:

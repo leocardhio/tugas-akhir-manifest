@@ -1,6 +1,19 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
+  name: emr-client-auth
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: emr-client-auth
+  minReplicas: 1
+  maxReplicas: 2
+  targetCPUUtilizationPercentage: 70
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
   name: emr-auth
 spec:
   scaleTargetRef:
