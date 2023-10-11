@@ -18,11 +18,11 @@ spec:
           name: emr-client-auth
           resources:
             requests:
-              memory: "32Mi"
-              cpu: "100m"
+              memory: "16Mi"
+              cpu: "75m"
             limits:
-              memory: "256Mi"
-              cpu: "600m"
+              memory: "128Mi"
+              cpu: "300m"
           livenessProbe:
             httpGet:
               path: /
@@ -69,11 +69,11 @@ spec:
           name: emr-auth
           resources:
             requests:
-              memory: "32Mi"
-              cpu: "100m"
+              memory: "16Mi"
+              cpu: "75m"
             limits:
-              memory: "256Mi"
-              cpu: "600m"
+              memory: "128Mi"
+              cpu: "300m"
           livenessProbe:
             httpGet:
               path: /
@@ -120,11 +120,11 @@ spec:
           name: emr-lab
           resources:
             requests:
-              memory: "32Mi"
-              cpu: "100m"
+              memory: "16Mi"
+              cpu: "75m"
             limits:
-              memory: "256Mi"
-              cpu: "600m"
+              memory: "128Mi"
+              cpu: "300m"
           livenessProbe:
             httpGet:
               path: /
@@ -171,11 +171,11 @@ spec:
           name: emr-outpatient
           resources:
             requests:
-              memory: "32Mi"
-              cpu: "100m"
+              memory: "16Mi"
+              cpu: "75m"
             limits:
-              memory: "256Mi"
-              cpu: "600m"
+              memory: "128Mi"
+              cpu: "300m"
           livenessProbe:
             httpGet:
               path: /
@@ -229,11 +229,11 @@ spec:
           name: emr-pharmacy
           resources:
             requests:
-              memory: "32Mi"
-              cpu: "100m"
+              memory: "16Mi"
+              cpu: "75m"
             limits:
-              memory: "256Mi"
-              cpu: "600m"
+              memory: "128Mi"
+              cpu: "300m"
           livenessProbe:
             httpGet:
               path: /
@@ -280,11 +280,11 @@ spec:
           name: emr-radiology
           resources:
             requests:
-              memory: "32Mi"
-              cpu: "100m"
+              memory: "16Mi"
+              cpu: "75m"
             limits:
-              memory: "256Mi"
-              cpu: "600m"
+              memory: "128Mi"
+              cpu: "300m"
           livenessProbe:
             httpGet:
               path: /
