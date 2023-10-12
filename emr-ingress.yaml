@@ -23,6 +23,13 @@ spec:
                 port:
                   number: 8080
           - pathType: Prefix
+            path: /api/v1/admin
+            backend:
+              service:
+                name: emr-auth
+                port:
+                  number: 8080
+          - pathType: Prefix
             path: /api/v1/resource/laboratory
             backend:
               service:
