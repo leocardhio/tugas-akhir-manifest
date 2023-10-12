@@ -9,7 +9,7 @@ data:
   DB_CLUSTER_URL: ta-emr.xywub6h.mongodb.net
   SA_EMAIL: mongodb-atlas-service-account@ta-emr-401712.iam.gserviceaccount.com
   SM_PROJECT_ID: ta-emr-401712
+  SECRET_VERSION: latest
   KMS_PROJECT_ID: kms-resource-401712
   KMS_LOCATION: asia-southeast2
   KMS_KEY_RING: MongoDB-Encryption-Key
-  KMS_KEY_VERSION: "latest"
