@@ -5,7 +5,6 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: gce
 spec:
-  ingressClassName: emr
   rules:
     - http:
         paths:
