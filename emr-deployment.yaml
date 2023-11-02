@@ -18,8 +18,8 @@ spec:
           name: emr-client-auth
           resources:
             requests:
-              memory: "100Mi"
-              cpu: "100m"
+              memory: "50Mi"
+              cpu: "50m"
           livenessProbe:
             httpGet:
               path: /
@@ -66,8 +66,8 @@ spec:
           name: emr-auth
           resources:
             requests:
-              memory: "100Mi"
-              cpu: "100m"
+              memory: "50Mi"
+              cpu: "50m"
           livenessProbe:
             httpGet:
               path: /
@@ -116,8 +116,8 @@ spec:
           name: emr-lab
           resources:
             requests:
-              memory: "100Mi"
-              cpu: "100m"
+              memory: "50Mi"
+              cpu: "50m"
           livenessProbe:
             httpGet:
               path: /
@@ -164,8 +164,8 @@ spec:
           name: emr-outpatient
           resources:
             requests:
-              memory: "100Mi"
-              cpu: "100m"
+              memory: "50Mi"
+              cpu: "50m"
           livenessProbe:
             httpGet:
               path: /
@@ -219,8 +219,8 @@ spec:
           name: emr-pharmacy
           resources:
             requests:
-              memory: "100Mi"
-              cpu: "100m"
+              memory: "50Mi"
+              cpu: "50m"
           livenessProbe:
             httpGet:
               path: /
@@ -267,8 +267,8 @@ spec:
           name: emr-radiology
           resources:
             requests:
-              memory: "100Mi"
-              cpu: "100m"
+              memory: "50Mi"
+              cpu: "50m"
           livenessProbe:
             httpGet:
               path: /
