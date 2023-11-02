@@ -18,8 +18,8 @@ spec:
           name: emr-client-auth
           resources:
             requests:
-              memory: "320Mi"
-              cpu: "320m"
+              memory: "100Mi"
+              cpu: "100m"
             limits:
               memory: "2Gi"
               cpu: "500m"
@@ -69,8 +69,8 @@ spec:
           name: emr-auth
           resources:
             requests:
-              memory: "320Mi"
-              cpu: "320m"
+              memory: "100Mi"
+              cpu: "100m"
             limits:
               memory: "2Gi"
               cpu: "500m"
@@ -122,8 +122,8 @@ spec:
           name: emr-lab
           resources:
             requests:
-              memory: "320Mi"
-              cpu: "320m"
+              memory: "100Mi"
+              cpu: "100m"
             limits:
               memory: "2Gi"
               cpu: "500m"
@@ -173,8 +173,8 @@ spec:
           name: emr-outpatient
           resources:
             requests:
-              memory: "320Mi"
-              cpu: "320m"
+              memory: "100Mi"
+              cpu: "100m"
             limits:
               memory: "2Gi"
               cpu: "500m"
@@ -231,8 +231,8 @@ spec:
           name: emr-pharmacy
           resources:
             requests:
-              memory: "320Mi"
-              cpu: "320m"
+              memory: "100Mi"
+              cpu: "100m"
             limits:
               memory: "2Gi"
               cpu: "500m"
@@ -282,8 +282,8 @@ spec:
           name: emr-radiology
           resources:
             requests:
-              memory: "320Mi"
-              cpu: "320m"
+              memory: "100Mi"
+              cpu: "100m"
             limits:
               memory: "2Gi"
               cpu: "500m"
