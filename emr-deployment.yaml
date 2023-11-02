@@ -20,6 +20,9 @@ spec:
             requests:
               memory: "50Mi"
               cpu: "50m"
+            limits:
+              memory: "100Mi"
+              cpu: "100m"
           livenessProbe:
             httpGet:
               path: /
@@ -68,6 +71,9 @@ spec:
             requests:
               memory: "50Mi"
               cpu: "50m"
+            limits:
+              memory: "100Mi"
+              cpu: "100m"
           livenessProbe:
             httpGet:
               path: /
@@ -118,6 +124,9 @@ spec:
             requests:
               memory: "50Mi"
               cpu: "50m"
+            limits:
+              memory: "100Mi"
+              cpu: "100m"
           livenessProbe:
             httpGet:
               path: /
@@ -166,6 +175,9 @@ spec:
             requests:
               memory: "50Mi"
               cpu: "50m"
+            limits:
+              memory: "100Mi"
+              cpu: "100m"
           livenessProbe:
             httpGet:
               path: /
@@ -221,6 +233,9 @@ spec:
             requests:
               memory: "50Mi"
               cpu: "50m"
+            limits:
+              memory: "100Mi"
+              cpu: "100m"
           livenessProbe:
             httpGet:
               path: /
@@ -269,6 +284,9 @@ spec:
             requests:
               memory: "50Mi"
               cpu: "50m"
+            limits:
+              memory: "100Mi"
+              cpu: "100m"
           livenessProbe:
             httpGet:
               path: /
