@@ -33,8 +33,8 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: emr-lab
-  minReplicas: 5
-  maxReplicas: 5
+  minReplicas: 4
+  maxReplicas: 4
   targetCPUUtilizationPercentage: 10
 ---
 apiVersion: autoscaling/v1
@@ -46,8 +46,8 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: emr-outpatient
-  minReplicas: 5
-  maxReplicas: 5
+  minReplicas: 4
+  maxReplicas: 4
   targetCPUUtilizationPercentage: 10
 ---
 apiVersion: autoscaling/v1
@@ -59,8 +59,8 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: emr-pharmacy
-  minReplicas: 5
-  maxReplicas: 5
+  minReplicas: 4
+  maxReplicas: 4
   targetCPUUtilizationPercentage: 10
 ---
 apiVersion: autoscaling/v1
@@ -72,7 +72,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: emr-radiology
-  minReplicas: 5
-  maxReplicas: 5
+  minReplicas: 4
+  maxReplicas: 4
   targetCPUUtilizationPercentage: 10
 ---
