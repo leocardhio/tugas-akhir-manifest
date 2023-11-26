@@ -13,7 +13,7 @@ spec:
         app: emr-client-auth
     spec:
       containers:
-        - image: leocardhio21/emr-client-auth:latest
+        - image: leocardhio21/emr-client-auth:v1.0
           imagePullPolicy: Always
           name: emr-client-auth
           resources:
@@ -47,7 +47,6 @@ spec:
               value: "JWT_ADMIN_PRIVATE_KEY"
             - name: DB_PASSWORD
               value: "DB_PASSWORD"
-            - name: JWT_DURATION
       serviceAccountName: default
 ---
 apiVersion: apps/v1
@@ -65,7 +64,7 @@ spec:
         app: emr-auth
     spec:
       containers:
-        - image: leocardhio21/emr-auth:latest
+        - image: leocardhio21/emr-auth:v1.0
           imagePullPolicy: Always
           name: emr-auth
           resources:
@@ -169,7 +168,7 @@ spec:
         app: emr-outpatient
     spec:
       containers:
-        - image: leocardhio21/emr-outpatient:latest
+        - image: leocardhio21/emr-outpatient:v1.0
           imagePullPolicy: Always
           name: emr-outpatient
           resources:
@@ -227,7 +226,7 @@ spec:
         app: emr-pharmacy
     spec:
       containers:
-        - image: leocardhio21/emr-pharmacy:latest
+        - image: leocardhio21/emr-pharmacy:v1.0
           imagePullPolicy: Always
           name: emr-pharmacy
           resources:
@@ -278,7 +277,7 @@ spec:
         app: emr-radiology
     spec:
       containers:
-        - image: leocardhio21/emr-radiology:latest
+        - image: leocardhio21/emr-radiology:v1.0
           imagePullPolicy: Always
           name: emr-radiology
           resources:
