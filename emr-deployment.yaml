@@ -47,6 +47,7 @@ spec:
               value: "JWT_ADMIN_PRIVATE_KEY"
             - name: DB_PASSWORD
               value: "DB_PASSWORD"
+            - name: JWT_DURATION
       serviceAccountName: default
 ---
 apiVersion: apps/v1
@@ -117,7 +118,7 @@ spec:
         app: emr-lab
     spec:
       containers:
-        - image: leocardhio21/emr-lab:latest
+        - image: leocardhio21/emr-lab:v1.0
           imagePullPolicy: Always
           name: emr-lab
           resources:
