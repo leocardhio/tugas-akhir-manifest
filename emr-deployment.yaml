@@ -118,7 +118,7 @@ spec:
         app: emr-lab
     spec:
       containers:
-        - image: leocardhio21/emr-lab:v1.0
+        - image: leocardhio21/emr-lab:latest
           imagePullPolicy: Always
           name: emr-lab
           resources:
