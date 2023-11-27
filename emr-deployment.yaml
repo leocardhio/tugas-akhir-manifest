@@ -168,7 +168,7 @@ spec:
         app: emr-outpatient
     spec:
       containers:
-        - image: leocardhio21/emr-outpatient:v1.0
+        - image: leocardhio21/emr-outpatient:v1.01
           imagePullPolicy: Always
           name: emr-outpatient
           resources:
