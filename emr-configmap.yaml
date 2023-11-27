@@ -13,3 +13,4 @@ data:
   KMS_PROJECT_ID: kms-resource-401712
   KMS_LOCATION: asia-southeast2
   KMS_KEY_RING: MongoDB-Encryption-Key
+  TIMESTAMP_SKEW: "20000"
