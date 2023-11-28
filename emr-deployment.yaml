@@ -13,7 +13,7 @@ spec:
         app: emr-client-auth
     spec:
       containers:
-        - image: leocardhio21/emr-client-auth:v1.03
+        - image: leocardhio21/emr-client-auth:v1.04
           imagePullPolicy: Always
           name: emr-client-auth
           resources:
@@ -73,7 +73,7 @@ spec:
         app: emr-auth
     spec:
       containers:
-        - image: leocardhio21/emr-auth:v1.03
+        - image: leocardhio21/emr-auth:v1.04
           imagePullPolicy: Always
           name: emr-auth
           resources:
@@ -135,7 +135,7 @@ spec:
         app: emr-lab
     spec:
       containers:
-        - image: leocardhio21/emr-lab:v1.03
+        - image: leocardhio21/emr-lab:v1.04
           imagePullPolicy: Always
           name: emr-lab
           resources:
@@ -195,7 +195,7 @@ spec:
         app: emr-outpatient
     spec:
       containers:
-        - image: leocardhio21/emr-outpatient:v1.03
+        - image: leocardhio21/emr-outpatient:v1.04
           imagePullPolicy: Always
           name: emr-outpatient
           resources:
@@ -262,7 +262,7 @@ spec:
         app: emr-pharmacy
     spec:
       containers:
-        - image: leocardhio21/emr-pharmacy:v1.03
+        - image: leocardhio21/emr-pharmacy:v1.04
           imagePullPolicy: Always
           name: emr-pharmacy
           resources:
@@ -322,7 +322,7 @@ spec:
         app: emr-radiology
     spec:
       containers:
-        - image: leocardhio21/emr-radiology:v1.03
+        - image: leocardhio21/emr-radiology:v1.04
           imagePullPolicy: Always
           name: emr-radiology
           resources:
