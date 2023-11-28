@@ -4,5 +4,5 @@ metadata:
   name: emr-backend-config
 spec:
   healthCheck:
-    checkIntervalSec: 10
+    checkIntervalSec: 16
     requestPath: /ready
