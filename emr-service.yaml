@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: emr-client-auth
   namespace: default
+  annotations:
+    cloud.google.com/backend-config: '{"default": "emr-backend-config"}'
 spec:
   ports:
     - port: 8079
@@ -17,6 +19,8 @@ kind: Service
 metadata:
   name: emr-auth
   namespace: default
+  annotations:
+    cloud.google.com/backend-config: '{"default": "emr-backend-config"}'
 spec:
   ports:
     - port: 8080
@@ -31,6 +35,8 @@ kind: Service
 metadata:
   name: emr-lab
   namespace: default
+  annotations:
+    cloud.google.com/backend-config: '{"default": "emr-backend-config"}'
 spec:
   ports:
     - port: 8081
@@ -45,6 +51,8 @@ kind: Service
 metadata:
   name: emr-outpatient
   namespace: default
+  annotations:
+    cloud.google.com/backend-config: '{"default": "emr-backend-config"}'
 spec:
   ports:
     - port: 8082
@@ -59,6 +67,8 @@ kind: Service
 metadata:
   name: emr-pharmacy
   namespace: default
+  annotations:
+    cloud.google.com/backend-config: '{"default": "emr-backend-config"}'
 spec:
   ports:
     - port: 8083
@@ -73,6 +83,8 @@ kind: Service
 metadata:
   name: emr-radiology
   namespace: default
+  annotations:
+    cloud.google.com/backend-config: '{"default": "emr-backend-config"}'
 spec:
   ports:
     - port: 8084
