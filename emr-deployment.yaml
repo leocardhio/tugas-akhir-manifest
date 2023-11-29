@@ -29,18 +29,13 @@ spec:
               port: 8079
             initialDelaySeconds: 10
             periodSeconds: 2
-            timeoutSeconds: 5
+            timeoutSeconds: 1
             successThreshold: 1
             failureThreshold: 3
           readinessProbe:
             httpGet:
               path: /ready
               port: 8079
-            initialDelaySeconds: 10
-            periodSeconds: 4
-            timeoutSeconds: 5
-            successThreshold: 1
-            failureThreshold: 6
           ports:
             - containerPort: 8080
               protocol: TCP
@@ -89,18 +84,13 @@ spec:
               port: 8080
             initialDelaySeconds: 10
             periodSeconds: 2
-            timeoutSeconds: 5
+            timeoutSeconds: 1
             successThreshold: 1
             failureThreshold: 3
           readinessProbe:
             httpGet:
               path: /ready
               port: 8080
-            initialDelaySeconds: 10
-            periodSeconds: 4
-            timeoutSeconds: 5
-            successThreshold: 1
-            failureThreshold: 6
           ports:
             - containerPort: 8080
               protocol: TCP
@@ -151,18 +141,13 @@ spec:
               port: 8081
             initialDelaySeconds: 10
             periodSeconds: 2
-            timeoutSeconds: 5
+            timeoutSeconds: 1
             successThreshold: 1
             failureThreshold: 3
           readinessProbe:
             httpGet:
               path: /ready
               port: 8081
-            initialDelaySeconds: 10
-            periodSeconds: 4
-            timeoutSeconds: 5
-            successThreshold: 1
-            failureThreshold: 6
           ports:
             - containerPort: 8081
               protocol: TCP
@@ -211,18 +196,13 @@ spec:
               port: 8082
             initialDelaySeconds: 10
             periodSeconds: 2
-            timeoutSeconds: 5
+            timeoutSeconds: 1
             successThreshold: 1
             failureThreshold: 3
           readinessProbe:
             httpGet:
               path: /ready
               port: 8082
-            initialDelaySeconds: 10
-            periodSeconds: 4
-            timeoutSeconds: 5
-            successThreshold: 1
-            failureThreshold: 6
           ports:
             - containerPort: 8082
               protocol: TCP
@@ -278,18 +258,13 @@ spec:
               port: 8083
             initialDelaySeconds: 10
             periodSeconds: 2
-            timeoutSeconds: 5
+            timeoutSeconds: 1
             successThreshold: 1
             failureThreshold: 3
           readinessProbe:
             httpGet:
               path: /ready
               port: 8083
-            initialDelaySeconds: 10
-            periodSeconds: 4
-            timeoutSeconds: 5
-            successThreshold: 1
-            failureThreshold: 6
           ports:
             - containerPort: 8083
               protocol: TCP
@@ -338,18 +313,13 @@ spec:
               port: 8084
             initialDelaySeconds: 10
             periodSeconds: 2
-            timeoutSeconds: 5
+            timeoutSeconds: 1
             successThreshold: 1
             failureThreshold: 3
           readinessProbe:
             httpGet:
               path: /ready
               port: 8084
-            initialDelaySeconds: 10
-            periodSeconds: 4
-            timeoutSeconds: 5
-            successThreshold: 1
-            failureThreshold: 6
           ports:
             - containerPort: 8084
               protocol: TCP
