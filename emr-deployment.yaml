@@ -37,7 +37,7 @@ spec:
               path: /ready
               port: 8079
           ports:
-            - containerPort: 8080
+            - containerPort: 8079
               protocol: TCP
           envFrom:
             - configMapRef:

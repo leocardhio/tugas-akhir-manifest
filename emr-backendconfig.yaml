@@ -6,5 +6,5 @@ spec:
   healthCheck:
     checkIntervalSec: 2
     requestPath: /ready
-    timeoutSeconds: 2
-    failureThreshold: 6
+    timeoutSec: 2
+    unhealthyThreshold: 6
